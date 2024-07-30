@@ -18,18 +18,19 @@ if [ $# -eq 0 ]; then
   echo "3. 四川电信（Sichuan_333）"
   echo "4. 浙江电信（Zhejiang_120）"
   echo "5. 北京电信（Beijing_dianxin_186）"
-  echo "6. 江苏（Jiangsu）"
-  echo "7. 广东电信（Guangdong_332）"
-  echo "8. 河南电信（Henan_327）"
-  echo "9. 山西电信（Shanxi_117）"
-  echo "10. 天津联通（Tianjin_160）"
-  echo "11. 湖北电信（Hubei_90）"
-  echo "12. 福建电信（Fujian_114）"
-  echo "13. 湖南电信（Hunan_282）"
-  echo "14. 甘肃电信（Gansu_105）"
+  echo "6. 江西（Jiangxi_105）"
+  echo "7. 江苏（Jiangsu）"
+  echo "8. 广东电信（Guangdong_332）"
+  echo "9. 河南电信（Henan_327）"
+  echo "10. 山西电信（Shanxi_117）"
+  echo "11. 天津联通（Tianjin_160）"
+  echo "12. 湖北电信（Hubei_90）"
+  echo "13. 福建电信（Fujian_114）"
+  echo "14. 湖南电信（Hunan_282）"
   echo "15. 河北联通（Hebei_313）"
-  echo "16. 江西（Jiangxi_105）"
+  echo "16. 重庆电信（Chongqing_161）" 
   echo "17. 陕西（Sanxi_123）"
+  echo "18. 甘肃电信（Gansu_105）"
   echo "0. 全部"
   read -t 10 -p "输入选择或在10秒内无输入将默认选择全部: " city_choice
 
@@ -81,66 +82,66 @@ case $city_choice in
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     6)
+        city="Jiangxi_105"
+        stream="udp/239.252.220.63:5140"
+        channel_key="江西"
+        url_fofa=$(echo ""udpxy" && country="CN" && region="Hebei"  && protocol="http"" | base64)
+        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
+    7)
         city="Jiangsu"
         stream="udp/239.49.8.19:9614"
         channel_key="江苏"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Jiangsu" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-    7)
+    8)
         city="Guangdong_332"
         stream="udp/239.77.1.98:5146"
         channel_key="广东电信"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-    8)
+    9)
         city="Henan_327"
         stream="rtp/239.16.20.1:10010"
         channel_key="河南电信"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Henan" && city="Zhengzhou"  && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-    9)
+    10)
         city="Shanxi_117"
         stream="udp/239.1.1.7:8007"
         channel_key="山西电信"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Shanxi" && city="Taiyuan" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-    10)
+    11)
         city="Tianjin_160"
         stream="udp/225.1.2.190:5002"
         channel_key="天津联通"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Tianjin" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-    11)
+    12)
         city="Hubei_90"
         stream="rtp/239.254.96.96:8550"
         channel_key="湖北电信"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Hubei" && city="Wuhan" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-    12)
+    13)
         city="Fujian_114"
         stream="rtp/239.61.2.183:9086"
         channel_key="福建电信"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Fujian" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-    13)
+    14)
         city="Hunan_282"
         stream="udp/239.76.252.35:9000"
         channel_key="湖南电信"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Hunan" && protocol="http"' | base64 |tr -d '\n')
-        url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        ;;
-    14)
-        city="Gansu_105"
-        stream="udp/239.255.30.123:8231"
-        channel_key="甘肃电信"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Gansu" && city="Lanzhou" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     15)
@@ -151,9 +152,9 @@ case $city_choice in
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;    
     16)
-        city="Jiangxi_105"
-        stream="udp/239.252.220.63:5140"
-        channel_key="江西"
+        city="Chongqing_161"
+        stream="rtp/235.254.196.249:1268"
+        channel_key="重庆电信"
         url_fofa=$(echo ""udpxy" && country="CN" && region="Hebei"  && protocol="http"" | base64)
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
@@ -164,9 +165,16 @@ case $city_choice in
         url_fofa=$(echo ""udpxy" && country="CN" && region="Hebei"  && protocol="http"" | base64)
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
+    18)
+        city="Gansu_105"
+        stream="udp/239.255.30.123:8231"
+        channel_key="甘肃电信"
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Gansu" && city="Lanzhou" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
     0)
         # 如果选择是“全部选项”，则逐个处理每个选项
-        for option in {1..17}; do
+        for option in {1..18}; do
           bash  "$0" $option  # 假定fofa.sh是当前脚本的文件名，$option将递归调用
         done
         exit 0
@@ -253,20 +261,16 @@ rm -rf tmp1.txt tmp2.txt tmp3.txt
 
 echo "上海电信,#genre#" >zubo_fofa.txt
 cat txt/Shanghai_103.txt >>zubo_fofa.txt
+echo "江西,#genre#" >>zubo_fofa.txt
+cat txt/Jiangxi_105.txt >>zubo_fofa.txt
 echo "江苏,#genre#" >>zubo_fofa.txt
 cat txt/Jiangsu.txt >>zubo_fofa.txt
 #echo "北京电信,#genre#" >>zubo_fofa.txt
 #cat txt/Beijing_dianxin_186.txt >>zubo_fofa.txt
 echo "北京联通,#genre#" >>zubo_fofa.txt
 cat txt/Beijing_liantong_145.txt >>zubo_fofa.txt
-echo "天津联通,#genre#" >>zubo_fofa.txt
-cat txt/Tianjin_160.txt >>zubo_fofa.txt
-echo "河南电信,#genre#" >>zubo_fofa.txt
-cat txt/Henan_327.txt >>zubo_fofa.txt
-echo "山西电信,#genre#" >>zubo_fofa.txt
-cat txt/Shanxi_117.txt >>zubo_fofa.txt
-echo "广东电信,#genre#" >>zubo_fofa.txt
-cat txt/Guangdong_332.txt >>zubo_fofa.txt
+echo "湖南电信,#genre#" >>zubo_fofa.txt
+cat txt/Hunan_282.txt >>zubo_fofa.txt
 echo "四川电信,#genre#" >>zubo_fofa.txt
 cat txt/Sichuan_333.txt >>zubo_fofa.txt
 echo "浙江电信,#genre#" >>zubo_fofa.txt
@@ -275,16 +279,21 @@ echo "湖北电信,#genre#" >>zubo_fofa.txt
 cat txt/Hubei_90.txt >>zubo_fofa.txt
 echo "福建电信,#genre#" >>zubo_fofa.txt
 cat txt/Fujian_114.txt >>zubo_fofa.txt
-echo "湖南电信,#genre#" >>zubo_fofa.txt
-cat txt/Hunan_282.txt >>zubo_fofa.txt
+echo "重庆电信,#genre#" >>zubo_fofa.txt
+cat txt/Chongqing_161.txt >>zubo_fofa.txt
+echo "天津联通,#genre#" >>zubo_fofa.txt
+cat txt/Tianjin_160.txt >>zubo_fofa.txt
+echo "河南电信,#genre#" >>zubo_fofa.txt
+cat txt/Henan_327.txt >>zubo_fofa.txt
+echo "山西电信,#genre#" >>zubo_fofa.txt
+cat txt/Shanxi_117.txt >>zubo_fofa.txt
+echo "广东电信,#genre#" >>zubo_fofa.txt
+cat txt/Guangdong_332.txt >>zubo_fofa.txt
 echo "甘肃电信,#genre#" >>zubo_fofa.txt
 cat txt/Gansu_105.txt >>zubo_fofa.txt
 echo "河北联通,#genre#" >>zubo_fofa.txt
 cat txt/Hebei_313.txt >>zubo_fofa.txt
-echo "江西,#genre#" >>zubo_fofa.txt
-cat txt/Jiangxi_105.txt >>zubo_fofa.txt
 echo "陕西,#genre#" >>zubo_fofa.txt
 cat txt/Sanxi_123.txt >>zubo_fofa.txt
-
 
 for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
