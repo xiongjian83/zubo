@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v2
            
     - name: Run Multitest Script
-      #working-directory: iptv/speedtest
+      #working-directory: zubo/speedtest
       run: |
         cd $GITHUB_WORKSPACE/speedtest
         bash ./test.sh
