@@ -1,6 +1,7 @@
 凤凰卫视资讯台,http://ipipip/rtp/239.61.2.183:9086
 凤凰卫视中文台,http://ipipip/rtp/239.61.2.184:9092
 福建综合,http://ipipip/rtp/239.61.3.4:9542
+福建综合,http://ipipip/rtp/239.61.2.1:8000
 东南卫视,http://ipipip/rtp/239.61.2.132:8708
 福建公共频道,http://ipipip/rtp/239.61.2.3:8012
 福建新闻,http://ipipip/rtp/239.61.2.4:8018
@@ -111,7 +112,7 @@ CGTN法语,http://ipipip/rtp/239.61.3.44:9782
 CGTN俄语,http://ipipip/rtp/239.61.3.45:9788
 CGTN德语,http://ipipip/rtp/239.61.3.43:9776
 CCTV1,http://ipipip/rtp/239.61.3.60:9878
-福建综合,http://ipipip/rtp/239.61.2.1:8000
+
 
 
 
