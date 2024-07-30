@@ -33,7 +33,7 @@ jobs:
         pip install requests
 
     - name: Run Python script
-      run: python hoteliptv.py
+      run: python main.py
 
     - name: Commit and push if changed
       run: |
