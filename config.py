@@ -1,7 +1,7 @@
 ip_version_priority = "ipv6"
 
 source_urls = [
-    "https://p.ntnas.top/https://raw.githubusercontent.com/redrainl/iptv/main/speedtest/zubo_fofa.txt",
+    "https://https://raw.githubusercontent.com/redrainl/iptv/main/speedtest/zubo_fofa.txt",
     "http://175.178.251.183:6689/channel.txt",
     "https://jihulab.com/ss3234741/sj/raw/2a8f0afa421a98836bc891698446c7271c2f32f3/lib/live2.txt",
     "https://gitcode.net/ygbh66/666/raw/master/x.txt",
@@ -12,7 +12,7 @@ source_urls = [
     "https://raw.githubusercontent.com/Fairy8o/IPTV/main/PDX-V6.txt",
     "https://live.zhoujie218.top/tv/iptv6.txt",
     "https://tv.youdu.fan:666/live/",
-    "http://ww.weidonglong.com/dsj.txt",
+    "http://www.weidonglong.com/dsj.txt",
     "http://xhztv.top/zbc.txt",
     "https://raw.githubusercontent.com/mlvjfchen/TV/main/iptv_list.txt",
     "https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt",
