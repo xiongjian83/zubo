@@ -1,8 +1,11 @@
 ip_version_priority = "ipv6"
 
 source_urls = [
+    "https://p.ntnas.top/https://raw.githubusercontent.com/redrainl/iptv/main/speedtest/zubo_fofa.txt",
     "http://175.178.251.183:6689/channel.txt",
-    "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
+    "https://jihulab.com/ss3234741/sj/raw/2a8f0afa421a98836bc891698446c7271c2f32f3/lib/live2.txt",
+    "https://gitcode.net/ygbh66/666/raw/master/x.txt",
+    "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
     "https://raw.githubusercontent.com/yuanzl77/IPTV/main/直播/央视频道.txt",
     "http://120.79.4.185/new/mdlive.txt",
     "https://raw.githubusercontent.com/Fairy8o/IPTV/main/PDX-V4.txt",
