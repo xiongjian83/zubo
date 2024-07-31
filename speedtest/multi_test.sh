@@ -19,10 +19,9 @@ if [ $# -eq 0 ]; then
   echo "11. 湖北电信（Hubei_90）"
   echo "12. 福建电信（Fujian_114）"
   echo "13. 湖南电信（Hunan_282）"
-  echo "14. 甘肃电信（Gansu_105）"
-  echo "15. 河北联通（Hebei_313）"
-  echo "16. 陕西（Sanxi_123）"
-  echo "17. 重庆电信（Chongqing_161）" 
+  echo "14. 河北联通（Hebei_313）"
+  echo "15. 陕西（Sanxi_123）"
+  echo "16. 重庆电信（Chongqing_161）" 
   echo "0. 全部"
   read -t 10 -p "输入选择或在10秒内无输入将默认选择全部: " city_choice
 
@@ -103,28 +102,23 @@ case $city_choice in
         channel_key="湖南电信"
         ;;
     14)
-        city="Gansu_105"
-        stream="udp/239.255.30.123:8231"
-        channel_key="甘肃电信"
-        ;;
-    15)
         city="Hebei_313"
         stream="rtp/239.253.93.134:6631"
         channel_key="河北联通"
         ;;
-   16)
+   15)
         city="Sanxi_123"
         stream="rtp/239.112.205.59:5140"
         channel_key="陕西"
         ;;
-   17)
+   16)
         city="Chongqing_161"
         stream="rtp/235.254.196.249:1268"
         channel_key=重庆电信"
         ;;
     0)
         # 如果选择是“全部选项”，则逐个处理每个选项
-        for option in {1..17}; do
+        for option in {1..16}; do
           bash  ./multi_test.sh $option  # 假定script_name.sh是当前脚本的文件名，$option将递归调用
         done
         exit 0
@@ -252,8 +246,6 @@ echo "福建电信,#genre#" >>zubo.txt
 cat txt/Fujian_114.txt >>zubo.txt
 echo "湖南电信,#genre#" >>zubo.txt
 cat txt/Hunan_282.txt >>zubo.txt
-echo "甘肃电信,#genre#" >>zubo.txt
-cat txt/Gansu_105.txt >>zubo.txt
 echo "河北联通,#genre#" >>zubo.txt
 cat txt/Hebei_313.txt >>zubo.txt
 echo "陕西,#genre#" >>zubo.txt
