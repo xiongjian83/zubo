@@ -22,7 +22,7 @@ if [ $# -eq 0 ]; then
   echo "14. 甘肃电信（Gansu_105）"
   echo "15. 河北联通（Hebei_313）"
   echo "16. 陕西（Sanxi_123）"
-  echo "17. 重庆电信（Chongqing_161）" 
+  echo "17. 重庆（Chongqing_161）" 
   echo "0. 全部"
   read -t 10 -p "输入选择或在10秒内无输入将默认选择全部: " city_choice
 
@@ -120,7 +120,7 @@ case $city_choice in
    17)
         city="Chongqing_161"
         stream="rtp/235.254.196.249:1268"
-        channel_key=重庆电信"
+        channel_key=重庆"
         ;;
     0)
         # 如果选择是“全部选项”，则逐个处理每个选项
@@ -252,7 +252,7 @@ echo "山西电信,#genre#" >>zubo.txt
 cat txt/Shanxi_117.txt >>zubo.txt
 echo "广东电信,#genre#" >>zubo.txt
 cat txt/Guangdong_332.txt >>zubo.txt
-echo "重庆电信,#genre#" >>zubo.txt
+echo "重庆,#genre#" >>zubo.txt
 cat txt/Chongqing_161.txt >>zubo.txt
 echo "甘肃电信,#genre#" >>zubo.txt
 cat txt/Gansu_105.txt >>zubo.txt
