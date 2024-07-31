@@ -11,7 +11,7 @@ if [ $# -eq 0 ]; then
   echo "3. 四川电信（Sichuan_333）"
   echo "4. 浙江电信（Zhejiang_120）"
   echo "5. 北京电信（Beijing_dianxin_186）"
-  echo "6. 揭阳酒店（Jieyang_129）"
+  echo "6. 江西（Jiangxi_105）"
   echo "7. 广东电信（Guangdong_332）"
   echo "8. 河南电信（Henan_327）"
   echo "9. 山西电信（Shanxi_117）"
@@ -21,9 +21,8 @@ if [ $# -eq 0 ]; then
   echo "13. 湖南电信（Hunan_282）"
   echo "14. 甘肃电信（Gansu_105）"
   echo "15. 河北联通（Hebei_313）"
-  echo "16. 江西（Jiangxi_105）"
-  echo "17. 陕西（Sanxi_123）"
-  echo "18. 重庆电信（Chongqing_161）" 
+  echo "16. 陕西（Sanxi_123）"
+  echo "17. 重庆电信（Chongqing_161）" 
   echo "0. 全部"
   read -t 10 -p "输入选择或在10秒内无输入将默认选择全部: " city_choice
 
@@ -64,9 +63,9 @@ case $city_choice in
         channel_key="北京电信"
         ;;
     6)
-        city="Jieyang_129"
-        stream="hls/38/index.m3u8"
-        channel_key="揭西"
+        city="Jiangxi_105"
+        stream="udp/239.252.220.63:5140"
+        channel_key="江西"
         ;;
     7)
         city="Guangdong_332"
@@ -113,24 +112,19 @@ case $city_choice in
         stream="rtp/239.253.93.134:6631"
         channel_key="河北联通"
         ;;
-    16)
-        city="Jiangxi_105"
-        stream="udp/239.252.220.63:5140"
-        channel_key="江西"
-        ;;
-    17)
+   16)
         city="Sanxi_123"
         stream="rtp/239.112.205.59:5140"
         channel_key="陕西"
         ;;
-   18)
+   17)
         city="Chongqing_161"
         stream="rtp/235.254.196.249:1268"
         channel_key=重庆电信"
         ;;
     0)
         # 如果选择是“全部选项”，则逐个处理每个选项
-        for option in {1..18}; do
+        for option in {1..17}; do
           bash  ./multi_test.sh $option  # 假定script_name.sh是当前脚本的文件名，$option将递归调用
         done
         exit 0
