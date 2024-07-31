@@ -11,7 +11,7 @@ if [ $# -eq 0 ]; then
   echo "3. 四川电信（Sichuan_333）"
   echo "4. 浙江电信（Zhejiang_120）"
   echo "5. 北京电信（Beijing_dianxin_186）"
-  echo "6. 揭阳酒店（Jieyang_129）"
+  echo "6. 重庆电信（Chongqing_161）"
   echo "7. 广东电信（Guangdong_332）"
   echo "8. 河南电信（Henan_327）"
   echo "9. 山西电信（Shanxi_117）"
@@ -63,9 +63,9 @@ case $city_choice in
         channel_key="北京电信"
         ;;
     6)
-        city="Jieyang_129"
-        stream="hls/38/index.m3u8"
-        channel_key="揭西"
+        city="Chongqing_161"
+        stream="rtp/235.254.196.249:1268"
+        channel_key="重庆电信"
         ;;
     7)
         city="Guangdong_332"
@@ -244,6 +244,8 @@ echo "广东电信,#genre#" >>zubo.txt
 cat txt/Guangdong_332.txt >>zubo.txt
 echo "四川电信,#genre#" >>zubo.txt
 cat txt/Sichuan_333.txt >>zubo.txt
+echo "重庆电信,#genre#" >>zubo.txt
+cat txt/Chongqing_161.txt >>zubo.txt
 echo "浙江电信,#genre#" >>zubo.txt
 cat txt/Zhejiang_120.txt >>zubo.txt
 echo "湖北电信,#genre#" >>zubo.txt
