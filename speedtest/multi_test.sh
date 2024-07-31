@@ -23,7 +23,6 @@ if [ $# -eq 0 ]; then
   echo "15. 河北联通（Hebei_313）"
   echo "16. 江西（Jiangxi_105）"
   echo "17. 陕西（Sanxi_123）"
-  echo "18. 重庆电信（Chongqing_161）" 
   echo "0. 全部"
   read -t 10 -p "输入选择或在10秒内无输入将默认选择全部: " city_choice
 
@@ -123,12 +122,6 @@ case $city_choice in
         stream="rtp/239.112.205.59:5140"
         channel_key="陕西"
        ;;
-  18)
-        city="Chongqing_161"
-        stream="rtp/235.254.196.249:1268"
-        channel_key=重庆电信"
-        ;;
-
     0)
         # 如果选择是“全部选项”，则逐个处理每个选项
         for option in {1..18}; do
@@ -235,10 +228,10 @@ rm -rf tmp1.txt tmp2.txt tmp3.txt
 
 echo "上海电信,#genre#" >zubo.txt
 cat txt/Shanghai_103.txt >>zubo.txt
-echo "揭西酒店凤凰,#genre#" >>zubo.txt
-cat txt/Jieyang_129.txt >>zubo.txt
 echo "北京电信,#genre#" >>zubo.txt
 cat txt/Beijing_dianxin_186.txt >>zubo.txt
+echo "江西,#genre#" >>zubo.txt
+cat txt/Jiangxi_105.txt >>zubo.txt
 echo "北京联通,#genre#" >>zubo.txt
 cat txt/Beijing_liantong_145.txt >>zubo.txt
 echo "天津联通,#genre#" >>zubo.txt
@@ -263,12 +256,9 @@ echo "甘肃电信,#genre#" >>zubo.txt
 cat txt/Gansu_105.txt >>zubo.txt
 echo "河北联通,#genre#" >>zubo.txt
 cat txt/Hebei_313.txt >>zubo.txt
-echo "江西,#genre#" >>zubo.txt
-cat txt/Jiangxi_105.txt >>zubo.txt
 echo "陕西,#genre#" >>zubo.txt
 cat txt/Sanxi_123.txt >>zubo.txt
-echo "重庆电信,#genre#" >>zubo.txt
-cat txt/Chongqing_161.txt >>zubo.txt
+
 
 # scp root@你的服务器:/speedtest/mylist.txt .
 # sed -i '/^上海电信/,$d' mylist.txt
