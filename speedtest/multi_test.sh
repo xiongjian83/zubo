@@ -262,6 +262,7 @@ echo "📡  河北频道,#genre#" >>zubo.txt
 cat txt/Hebei_313.txt >>zubo.txt
 
 
+
 # scp root@你的服务器:/speedtest/mylist.txt .
 # sed -i '/^上海电信/,$d' mylist.txt
 # sed -i '/^上海电信/,/^上海IPV6/{/^上海IPV6/!d;}' mylist.txt
