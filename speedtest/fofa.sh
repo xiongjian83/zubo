@@ -30,7 +30,7 @@ if [ $# -eq 0 ]; then
   echo "15. 河北联通（Hebei_313）"
   echo "16. 重庆电信（Chongqing_161）" 
   echo "17. 陕西（Sanxi_123）"
-  echo "18. 甘肃电信（Gansu_105）"
+  echo "18. 广西（Guangxi_163）"
   echo "19. 安徽（Anhui_191）"
   echo "0. 全部"
   read -t 10 -p "输入选择或在10秒内无输入将默认选择全部: " city_choice
@@ -167,9 +167,9 @@ case $city_choice in
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     18)
-        city="Gansu_105"
-        stream="udp/239.255.30.123:8231"
-        channel_key="甘肃电信"
+        city="Guangxi_163"
+        stream="udp/239.81.0.107:4056"
+        channel_key="广西"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Gansu" && city="Lanzhou" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
@@ -299,8 +299,8 @@ echo "📡  河南频道,#genre#" >>zubo_fofa.txt
 cat txt/Henan_327.txt >>zubo_fofa.txt
 echo "📡  山西频道,#genre#" >>zubo_fofa.txt
 cat txt/Shanxi_117.txt >>zubo_fofa.txt
-echo "📡  甘肃频道,#genre#" >>zubo_fofa.txt
-cat txt/Gansu_105.txt >>zubo_fofa.txt
+echo "📡  广西频道,#genre#" >>zubo_fofa.txt
+cat txt/Guangxi_163.txt >>zubo_fofa.txt
 echo "📡  河北频道,#genre#" >>zubo_fofa.txt
 cat txt/Hebei_313.txt >>zubo_fofa.txt
 echo "📡  陕西频道,#genre#" >>zubo_fofa.txt
