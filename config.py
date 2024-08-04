@@ -1,7 +1,7 @@
 ip_version_priority = "ipv6"
 
 source_urls = [
-    "https://raw.githubusercontent.com/redrainl/iptv/main/speedtest/zubo_fofa.txt",
+    "https://raw.githubusercontent.com/xiongjian83/iptv/main/speedtest/zubo_fofa.txt",
     "https://jihulab.com/ss3234741/sj/raw/2a8f0afa421a98836bc891698446c7271c2f32f3/lib/live2.txt",
     "https://gitcode.net/ygbh66/666/raw/master/x.txt",
     "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
