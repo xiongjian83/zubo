@@ -34,7 +34,7 @@ CCTV14,http://ipipip/rtp/239.69.1.107:10280
 CCTV15,http://ipipip/rtp/239.69.1.155:10566
 CCTV16,http://ipipip/rtp/239.69.1.247:11124
 CCTV17,http://ipipip/rtp/239.69.1.152:10548
-CCTV16-4K,http://ipipip/rtp/239.69.1.13:9718
+CCTV164K,http://ipipip/rtp/239.69.1.13:9718
 CCTV第一剧场,http://ipipip/rtp/239.69.1.74:10084
 CCTV兵器科技,http://ipipip/rtp/239.69.1.79:10114
 CCTV风云足球,http://ipipip/rtp/239.69.1.81:10126
@@ -74,7 +74,7 @@ BestTV测试3-4K,http://ipipip/rtp/239.69.1.25:9790
 广西卫视,http://ipipip/rtp/239.69.1.191:10788
 吉林卫视,http://ipipip/rtp/239.69.1.212:10914
 黑龙江卫视,http://ipipip/rtp/239.254.96.138:8902
-CHC高清电影,http://ipipip/rtp/239.69.1.241:11088
+CHC影迷电影,http://ipipip/rtp/239.69.1.241:11088
 CHC动作电影,http://ipipip/rtp/239.69.1.242:11094
 CHC家庭影院,http://ipipip/rtp/239.69.1.243:11100
 卡酷少儿,http://ipipip/rtp/239.69.1.193:10800
