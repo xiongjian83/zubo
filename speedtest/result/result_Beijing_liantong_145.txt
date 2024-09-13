@@ -1,11 +1,4 @@
-1309k  drive.mxmy.net:8888
-1307k  114.254.91.45:4000
-1291k  114.243.104.163:4000
-1276k  yfaqkkms.zzmd.fun:8888
-1269k  wg.mxmy.net:8888
-1266k  imzbpfrp.zzmd.fun:8888
-1241k  222.129.32.189:8686
-1233k  222.129.33.14:8888
-1121k  sweetown.fun:4000
-1102k  masiqi.myqnapcloud.com:4022
-655k  iptv.8t.cx:8180
+1120k  noeypszbgd.cn.zzmd.fun:8888
+1008k  bplwberp.zzmd.fun:8888
+922k  iptv.8t.cx:8180
+889k  sweetown.fun:4000
