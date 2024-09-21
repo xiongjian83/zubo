@@ -1,6 +1,7 @@
-1402k  123.113.237.36:8012
-1231k  noeypszbgd.cn.zzmd.fun:8888
-1223k  yfaqkkms.zzmd.fun:8888
-1214k  bplwberp.zzmd.fun:8888
-1106k  114.253.165.121:10000
-913k  114.240.43.183:8888
+1408k  222.131.15.137:4000
+1300k  ikuai.zlsip.top:4022
+1294k  imzbpfrp.zzmd.fun:8888
+1284k  yfaqkkms.zzmd.fun:8888
+1277k  drive.mxmy.net:8888
+1203k  123.113.34.218:4022
+1163k  114.243.102.64:4000
