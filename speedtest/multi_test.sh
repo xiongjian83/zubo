@@ -45,12 +45,12 @@ case $city_choice in
         ;;
     2)
         city="Beijing_liantong_145"
-        stream="rtp/239.3.1.236:2000"
+        stream="rtp/239.3.1.129:8008"
         channel_key="北京联通"
         ;;
     3)
         city="Sichuan_333"
-        stream="udp/239.93.42.33:5140"
+        stream="udp/239.93.0.169:5140"
         channel_key="四川电信"
         ;;
     4)
@@ -65,8 +65,8 @@ case $city_choice in
         ;;
     6)
         city="Chongqing_161"
-        stream="rtp/235.254.196.249:1268"
-        channel_key="重庆电信"
+        stream="udp/225.0.4.187:7980"
+        channel_key="重庆联通"
         ;;
     7)
         city="Guangdong_332"
@@ -100,7 +100,7 @@ case $city_choice in
         ;;
     13)
         city="Hunan_282"
-        stream="udp/239.76.252.35:9000"
+        stream="udp/239.76.245.51:1234"
         channel_key="湖南电信"
         ;;
     14)
