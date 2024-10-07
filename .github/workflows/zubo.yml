@@ -1,34 +1,41 @@
-name: Daily Job
+name: Daily Job  
 
-on:
-  schedule:
-    - cron: "0 20 * * *"
-  workflow_dispatch:
+on:  
+  schedule:  
+    - cron: "0 6,12,18 * * *" # 每日 0:00,6:00,12:00,18:00 UTC  
+  workflow_dispatch:  
 
-jobs:
-  run-script:
-    runs-on: ubuntu-latest
+jobs:  
+  run-script:  
+    runs-on: ubuntu-latest  
 
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+    steps:  
+    - name: Checkout Repository  
+      uses: actions/checkout@v3  
       
-    - name: Install Dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y yt-dlp sed nmap
+    - name: Install Dependencies  
+      run: |  
+        sudo apt-get update  
+        sudo apt-get install -y yt-dlp sed nmap  
       
-    - name: Run Multitest Script
-      #working-directory: zubo/speedtest
-      run: |
-        cd $GITHUB_WORKSPACE/speedtest
-        bash ./multi_test.sh
-        bash ./fofa.sh
-    - name: Update Results
-      run: |
-        cd $GITHUB_WORKSPACE/speedtest
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git commit -m "Update results"
-        git push
+    - name: Run Multitest Script  
+      run: |  
+        set -e  
+        cd $GITHUB_WORKSPACE/speedtest  
+        bash ./multi_test.sh  
+        bash ./fofa.sh  
+
+    - name: 提交并推送更改
+        if: steps.detect_changes.outcome != 'success'
+        run: |
+          git commit -m "zubo $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
+          git push
+
+    - name: Update Results  
+      run: |  
+        cd $GITHUB_WORKSPACE/speedtest  
+        git config --local user.email "action@github.com"  
+        git config --local user.name "GitHub Action"  
+        git add .  
+        git diff --cached --quiet || git commit -m "Update results"  
+        git push  
