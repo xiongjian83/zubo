@@ -10,7 +10,7 @@ if [ $# -eq 0 ]; then
   echo "2. 北京联通（Beijing_liantong_145）"
   echo "3. 四川电信（Sichuan_333）"
   echo "4. 浙江电信（Zhejiang_120）"
-  echo "5. 北京电信（Beijing_dianxin_186）"
+  echo "5. 甘肃电信（Gansu_105）"
   echo "6. 重庆电信（Chongqing_161）"
   echo "7. 广东电信（Guangdong_332）"
   echo "8. 河南电信（Henan_327）"
@@ -59,9 +59,9 @@ case $city_choice in
         channel_key="浙江电信"
         ;;
     5)
-        city="Beijing_dianxin_186"
-        stream="udp/225.1.8.80:2000"
-        channel_key="北京电信"
+        city="Gansu_105"
+        stream="udp/239.255.30.250:8231"
+        channel_key="甘肃电信"
         ;;
     6)
         city="Chongqing_161"
@@ -234,16 +234,14 @@ rm -rf tmp1.txt tmp2.txt tmp3.txt
 
 echo "📡  上海频道,#genre#" >zubo.txt
 cat txt/Shanghai_103.txt >>zubo.txt
-echo "📡  北京电信,#genre#" >>zubo.txt
-cat txt/Beijing_dianxin_186.txt >>zubo.txt
+echo "📡  北京频道,#genre#" >>zubo.txt
+cat txt/Beijing_liantong_145.txt >>zubo.txt
 echo "📡  江西频道,#genre#" >>zubo.txt
 cat txt/Jiangxi_105.txt >>zubo.txt
 echo "📡  湖南频道,#genre#" >>zubo.txt
 cat txt/Hunan_282.txt >>zubo.txt
 echo "📡  广东频道,#genre#" >>zubo.txt
 cat txt/Guangdong_332.txt >>zubo.txt
-echo "📡  北京联通,#genre#" >>zubo.txt
-cat txt/Beijing_liantong_145.txt >>zubo.txt
 echo "📡  四川频道,#genre#" >>zubo.txt
 cat txt/Sichuan_333.txt >>zubo.txt
 echo "📡  重庆频道,#genre#" >>zubo.txt
@@ -268,6 +266,8 @@ echo "📡  广西频道,#genre#" >>zubo.txt
 cat txt/Guangxi_163.txt >>zubo.txt
 echo "📡  河北频道,#genre#" >>zubo.txt
 cat txt/Hebei_313.txt >>zubo.txt
+echo "📡  甘肃频道,#genre#" >>zubo.txt
+cat txt/Gansu_105.txt >>zubo.txt
 
 
 

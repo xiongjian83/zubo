@@ -17,7 +17,7 @@ if [ $# -eq 0 ]; then
   echo "2. 北京联通（Beijing_liantong_145）"
   echo "3. 四川电信（Sichuan_333）"
   echo "4. 浙江电信（Zhejiang_120）"
-  echo "5. 北京电信（Beijing_dianxin_186）"
+  echo "5. 甘肃电信（Gansu_105）"
   echo "6. 江西（Jiangxi_105）"
   echo "7. 江苏（Jiangsu）"
   echo "8. 广东电信（Guangdong_332）"
@@ -76,17 +76,17 @@ case $city_choice in
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     5)
-        city="Beijing_dianxin_186"
-        stream="udp/225.1.8.80:2000"
-        channel_key="北京电信"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Beijing" && org="China Networks Inter-Exchange"  && protocol="http"' | base64 |tr -d '\n')
+        city="Gansu_105"
+        stream="udp/239.255.30.250:8231"
+        channel_key="甘肃电信"
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Gansu" && org="China Networks Inter-Exchange"  && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     6)
         city="Jiangxi_105"
         stream="udp/239.252.220.63:5140"
         channel_key="江西"
-        url_fofa=$(echo ""udpxy" && country="CN" && region="Hebei"  && protocol="http"" | base64)
+         url_fofa=$(echo  '"udpxy" && country="CN" && region="Jiangxi" && org="China Networks Inter-Exchange"  && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     7)
@@ -156,28 +156,28 @@ case $city_choice in
         city="Chongqing_161"
         stream="rtp/235.254.196.249:1268"
         channel_key="重庆电信"
-        url_fofa=$(echo ""udpxy" && country="CN" && region="Hebei"  && protocol="http"" | base64)
+        url_fofa=$(echo ""udpxy" && country="CN" && region="Chongqing"  && protocol="http"" | base64)
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     17)
         city="Sanxi_123"
         stream="rtp/239.112.205.59:5140"
         channel_key="陕西"
-        url_fofa=$(echo ""udpxy" && country="CN" && region="Hebei"  && protocol="http"" | base64)
+        url_fofa=$(echo ""udpxy" && country="CN" && region="Sanxi"  && protocol="http"" | base64)
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     18)
         city="Guangxi_163"
         stream="udp/239.81.0.107:4056"
         channel_key="广西"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Gansu" && city="Lanzhou" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangxi" && city="Nanning" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
    19)
         city="Anhui_191"
         stream="rtp/238.1.79.27:4328"
         channel_key="安徽"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Gansu" && city="Lanzhou" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Anhui" && city="Hefei" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     0)
@@ -273,8 +273,6 @@ echo "📡  江西频道,#genre#" >>zubo_fofa.txt
 cat txt/Jiangxi_105.txt >>zubo_fofa.txt
 echo "📡  江苏频道,#genre#" >>zubo_fofa.txt
 cat txt/Jiangsu.txt >>zubo_fofa.txt
-#echo "📡  北京电信,#genre#" >>zubo_fofa.txt
-#cat txt/Beijing_dianxin_186.txt >>zubo_fofa.txt
 echo "📡  北京联通,#genre#" >>zubo_fofa.txt
 cat txt/Beijing_liantong_145.txt >>zubo_fofa.txt
 echo "📡  湖南频道,#genre#" >>zubo_fofa.txt
@@ -305,5 +303,9 @@ echo "📡  河北频道,#genre#" >>zubo_fofa.txt
 cat txt/Hebei_313.txt >>zubo_fofa.txt
 echo "📡  陕西频道,#genre#" >>zubo_fofa.txt
 cat txt/Sanxi_123.txt >>zubo_fofa.txt
+#echo "📡  山西频道,#genre#" >>zubo_fofa.txt
+#cat txt/Shanxi_117.txt >>zubo_fofa.txt
+#echo "📡  甘肃频道,#genre#" >>zubo_fofa.txt
+#cat txt/Gansu_105.txt >>zubo_fofa.txt
 
 for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
