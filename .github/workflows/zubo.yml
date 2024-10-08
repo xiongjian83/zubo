@@ -2,7 +2,7 @@ name: Daily Job
 
 on:  
   schedule:  
-    - cron: "0 6,12,18 * * *" # 每日 0:00,6:00,12:00,18:00 UTC  
+    - cron: "0 0,8,18 * * *" # 每日 0:00,6:00,12:00,18:00 UTC  
   workflow_dispatch:  
 
 jobs:  
