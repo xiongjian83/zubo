@@ -25,12 +25,6 @@ jobs:
         bash ./multi_test.sh  
         bash ./fofa.sh  
 
-    - name: 提交并推送更改
-        if: steps.detect_changes.outcome != 'success'
-        run: |
-          git commit -m "zubo $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
-          git push
-
     - name: Update Results  
       run: |  
         cd $GITHUB_WORKSPACE/speedtest  
